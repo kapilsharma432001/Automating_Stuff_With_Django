@@ -5,4 +5,4 @@ class Command(BaseCommand):
     help = "This command is used to print the hello world."
 
     def handle(self, *args, **kwargs):
-        print("Hello, World!")
+        self.stdout.write("Hello, World!")
