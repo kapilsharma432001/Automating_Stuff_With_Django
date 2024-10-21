@@ -36,7 +36,7 @@ class Command(BaseCommand):
             reader = csv.DictReader(file)
             for row in reader:
                 # Perform data validation and insertion here
-                Student.objects.create(**row)
+                model.objects.create(**row)
         self.stdout.write(self.style.SUCCESS("Data imported successfully from the CSV file"))
 
     
